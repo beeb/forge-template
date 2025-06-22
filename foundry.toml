@@ -1,2 +1,13 @@
 [profile.ci.fuzz]
 runs = 10_000
+
+[profile.default]
+libs = ["dependencies"]
+remappings = ["forge-std/=dependencies/forge-std-1.9.7/src/"]
+
+[dependencies]
+forge-std = "1.9.7"
+
+[soldeer]
+remappings_location = "config"
+recursive_deps = true
